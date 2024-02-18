@@ -1,5 +1,5 @@
 const allSeat = document.getElementsByClassName('seat-btn');
-console.log(allSeat);
+
 let seatCount = 0;
 let seatLeft = 16;
 let seatPrice = 0;
@@ -14,5 +14,6 @@ for(const seat of allSeat) {
         document.getElementById('seat-count').innerText = seatCount;
         document.getElementById('seat-left').innerText = seatLeft;
         document.getElementById('seat-price').innerText = seatPrice;
+        console.log(event.target.innerText)
     })
 }

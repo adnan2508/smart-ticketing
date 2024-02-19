@@ -25,7 +25,6 @@ for (const seat of allSeat) {
                 for (const otherSeat of allSeat) {
                 if (otherSeat !== seat) {
                 otherSeat.disabled = true;
-                //window.alert("Maximum tickets purchased");
           }
         }
       }

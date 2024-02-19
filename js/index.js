@@ -18,32 +18,28 @@ for (const seat of allSeat) {
             document.getElementById("seat-left").innerText = seatLeft;
             document.getElementById("seat-price").innerText = seatPrice;
             document.getElementById("grand-total").innerText = grandTotal;
+
             seat.disabled = true;
             // Disable all other buttons only if 4 seats are selected
-    if (seatCount === 4) {
-        for (const otherSeat of allSeat) {
-          if (otherSeat !== seat) {
-            otherSeat.disabled = true;
-            alert("You have purchased maximum seat!")
+            if (seatCount === 4) {
+                for (const otherSeat of allSeat) {
+                if (otherSeat !== seat) {
+                otherSeat.disabled = true;
+                //window.alert("Maximum tickets purchased");
           }
         }
       }
-  
         
             const seatNo = event.target.innerText;
             const addSeat = document.getElementById("add-seat");
-        
-            //const div = document.createElement('div');
+
             const p = document.createElement("p");
-            p.innerText = seatNo;
-            const p2 = document.createElement("p");
-            p2.innerText = "Economy";
-            const p3 = document.createElement("p");
-            p3.innerText = 550;
-            //addSeat.appendChild(div)
+            p.innerHTML = `<div class="flex justify-between items-center mt-5">
+            <p>${seatNo}</p>
+            <p>Economy</p>
+            <p>550</p>
+            </div>`
             addSeat.appendChild(p);
-            addSeat.appendChild(p2);
-            addSeat.appendChild(p3);
             
           });
 }

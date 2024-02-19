@@ -20,11 +20,11 @@ for (const seat of allSeat) {
             document.getElementById("grand-total").innerText = grandTotal;
             seat.disabled = true;
             // Disable all other buttons only if 4 seats are selected
-    if (seatCount === 5) {
+    if (seatCount === 4) {
         for (const otherSeat of allSeat) {
-          if (otherSeat !== seat) { // Avoid disabling the clicked button again
+          if (otherSeat !== seat) {
             otherSeat.disabled = true;
-            alert("You can only buy 4 tickets");
+            alert("You have purchased maximum seat!")
           }
         }
       }

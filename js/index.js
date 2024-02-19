@@ -6,33 +6,36 @@ let seatPrice = 0;
 let grandTotal;
 
 for (const seat of allSeat) {
-  seat.addEventListener("click", function (event) {
-    seat.style.backgroundColor = "#1DD100";
-    seat.style.color = "white";
-    seatCount = seatCount + 1;
-    seatLeft = seatLeft - 1;
-    seatPrice = seatCount * 550;
-    grandTotal = seatPrice;
-    document.getElementById("seat-count").innerText = seatCount;
-    document.getElementById("seat-left").innerText = seatLeft;
-    document.getElementById("seat-price").innerText = seatPrice;
-    document.getElementById("grand-total").innerText = grandTotal;
-
-    const seatNo = event.target.innerText;
-    const addSeat = document.getElementById("add-seat");
-
-    //const div = document.createElement('div');
-    const p = document.createElement("p");
-    p.innerText = seatNo;
-    const p2 = document.createElement("p");
-    p2.innerText = "Economy";
-    const p3 = document.createElement("p");
-    p3.innerText = 550;
-    //addSeat.appendChild(div)
-    addSeat.appendChild(p);
-    addSeat.appendChild(p2);
-    addSeat.appendChild(p3);
-  });
+    
+        seat.addEventListener("click", function (event) {
+            seat.style.backgroundColor = "#1DD100";
+            seat.style.color = "white";
+            seatCount = seatCount + 1;
+            seatLeft = seatLeft - 1;
+            seatPrice = seatCount * 550;
+            grandTotal = seatPrice;
+            document.getElementById("seat-count").innerText = seatCount;
+            document.getElementById("seat-left").innerText = seatLeft;
+            document.getElementById("seat-price").innerText = seatPrice;
+            document.getElementById("grand-total").innerText = grandTotal;
+            seat.disabled = true;
+        
+            const seatNo = event.target.innerText;
+            const addSeat = document.getElementById("add-seat");
+        
+            //const div = document.createElement('div');
+            const p = document.createElement("p");
+            p.innerText = seatNo;
+            const p2 = document.createElement("p");
+            p2.innerText = "Economy";
+            const p3 = document.createElement("p");
+            p3.innerText = 550;
+            //addSeat.appendChild(div)
+            addSeat.appendChild(p);
+            addSeat.appendChild(p2);
+            addSeat.appendChild(p3);
+            
+          });
 }
 
 const couponText = document.getElementById("coupon-text");

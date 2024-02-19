@@ -45,7 +45,7 @@ couponText.addEventListener("keyup", function (event) {
     couponCodeBtn.addEventListener("click", function () {
       const couponCode = document.getElementById("coupon-code");
       couponCode.style.display = "none";
-      grandTotal = (seatPrice*15)/100;
+      grandTotal = (seatPrice * 15) / 100;
       document.getElementById("grand-total").innerText = grandTotal;
     });
   } else if (text === "Couple 20") {
@@ -54,7 +54,7 @@ couponText.addEventListener("keyup", function (event) {
     couponCodeBtn.addEventListener("click", function () {
       const couponCode = document.getElementById("coupon-code");
       couponCode.style.display = "none";
-      grandTotal = (seatPrice*20)/100;
+      grandTotal = (seatPrice * 20) / 100;
       document.getElementById("grand-total").innerText = grandTotal;
     });
   } else {

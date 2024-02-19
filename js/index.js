@@ -19,6 +19,16 @@ for (const seat of allSeat) {
             document.getElementById("seat-price").innerText = seatPrice;
             document.getElementById("grand-total").innerText = grandTotal;
             seat.disabled = true;
+            // Disable all other buttons only if 4 seats are selected
+    if (seatCount === 5) {
+        for (const otherSeat of allSeat) {
+          if (otherSeat !== seat) { // Avoid disabling the clicked button again
+            otherSeat.disabled = true;
+            alert("You can only buy 4 tickets");
+          }
+        }
+      }
+  
         
             const seatNo = event.target.innerText;
             const addSeat = document.getElementById("add-seat");
